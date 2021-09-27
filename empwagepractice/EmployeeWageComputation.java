@@ -1,20 +1,22 @@
 package empwagepractice;
 
 public class EmployeeWageComputation {
-	
-		public static void main(String[] args) {
+	      public static void main(String[] args) {
+				final int IS_FULL_TIME = 1;
+				final int EMP_RATE_PER_HOUR = 20;
+				//Variables
+				int empHrs = 0;
+				int empWage = 0;
+				double empCheck = Math.floor(Math.random() *10 %2);
+				if (empCheck == IS_FULL_TIME) {
+						empHrs = 8;
+				}		
+				else {
+					    empHrs = 0;
+				}
+				empWage = empHrs * EMP_RATE_PER_HOUR;
+				System.out.println("Daily Employee Wage: " + empWage);
 			
-		//Constants
-		 final int IS_FULL_Time = 1;
-		//Computation
-		double empCheck = Math.floor(Math.random()*10)%2;
-		if (empCheck == IS_FULL_Time) 
-		{
-			System.out.println("Employee is Present");
-		}	
-		else
-		{
-			System.out.println("Employee is Absent");
-	    }
+				
  }	
 }
